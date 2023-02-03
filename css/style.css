@@ -88,7 +88,8 @@
 .keyboard h2 {
   font-size: 50px;
   padding: 20px;
-  text-shadow: rgba(255, 255, 255, 0.521), 0.26; }
+  text-shadow: rgba(255, 255, 255, 0.521), 0.26;
+  background-color: #000000a2; }
 
 .keyboard .but-key {
   margin-top: 20px;
@@ -462,7 +463,7 @@ span {
   font-weight: bolder; }
 
 .barra .joystick {
-  background-image: url(../assets/img/playstation.avif);
+  background-image: url(../assets/img/playstation.jpg);
   height: 40rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -490,7 +491,7 @@ span {
   min-height: 100vh;
   background-color: #000000; }
   .section-games .contenedor-games .galeria {
-    max-width: 750px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 250px 250px 250px;
     grid-template-rows: 250px 250px 250px;
@@ -503,38 +504,39 @@ span {
       grid-column: 2/4; }
     .section-games .contenedor-games .galeria img {
       object-fit: cover;
-      width: 100%;
+      width: 95%;
       height: 100%;
       transition: all .2s ease-in-out;
       border-radius: 10px; }
       .section-games .contenedor-games .galeria img:hover {
         transform: scale(1.1);
         cursor: pointer; }
+  .section-games .contenedor-games .galeria__responsive {
+    display: none; }
 
 .exclusivo .exclusive-container {
   display: flex;
   height: 400px;
   width: 100%;
+  align-items: center;
   margin-top: 15px;
   justify-content: center;
   background: #ADA996;
   background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
   background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); }
-  .exclusivo .exclusive-container .img-exclusive img {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    height: 300px;
-    width: 100%;
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+  .exclusivo .exclusive-container img {
+    width: 35%;
+    margin-left: 1%; }
   .exclusivo .exclusive-container .texto-exclusive {
     margin-top: 168px;
-    position: relative;
-    padding: 20px; }
+    padding: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 15px;
+    text-align: center; }
     .exclusivo .exclusive-container .texto-exclusive h3 {
       font-weight: 600;
-      font-size: 30px;
+      font-size: 1.7rem;
       line-height: 1.1;
       color: black;
       font-family: 'Alfa Slab One';
@@ -542,9 +544,9 @@ span {
       text-transform: uppercase; }
       .exclusivo .exclusive-container .texto-exclusive h3 p {
         margin-top: 20px;
-        text-shadow: 0px 1px 5px #F2F2F2;
-        width: 100%;
-        color: #3d3d3d; }
+        text-shadow: 0px 1px 5px #b4b3b3;
+        color: #3d3d3d;
+        font-size: 1.1rem; }
 
 .body-contacto {
   background-color: #cacaca; }
@@ -624,6 +626,9 @@ span {
   .section-contacto .contacto-right tr td {
     padding-top: 20px; }
 
+.contacto-right__responsive {
+  display: none; }
+
 .encabezado {
   margin-top: 15px;
   text-align: center;
@@ -657,7 +662,7 @@ span {
     flex-direction: column;
     align-items: center;
     padding-top: 15px; }
-    .nvidia-section .nvidia-container .nvidia-img .rtx, .nvidia-section .nvidia-container .nvidia-img .rtx-2, .nvidia-section .nvidia-container .nvidia-img .amd-container .amd-img .amd, .amd-container .amd-img .nvidia-section .nvidia-container .nvidia-img .amd {
+    .nvidia-section .nvidia-container .nvidia-img .rtx, .nvidia-section .nvidia-container .nvidia-img .rtx-2 {
       margin-top: 15px;
       width: 60%;
       cursor: pointer; }
@@ -677,14 +682,22 @@ span {
   flex-direction: column;
   align-items: center;
   padding-top: 15px; }
+  .amd-container .amd-img .amd {
+    margin-top: 15px;
+    width: 60%;
+    cursor: pointer; }
   .amd-container .amd-img .amd-1, .amd-container .amd-img .amd-2 {
     margin: 15px 0 0 0;
     width: 60%;
     cursor: pointer; }
 
+@media screen and (max-width: 1600px) {
+  .footer-contacto {
+    position: relative;
+    width: 100%; } }
+
 /* -------RESPONSIVE: 780px TABLET: header ----------- */
 @media screen and (max-width: 780px) {
-  /* -------RESPONSIVE: 780px TABLET: header ----------- */
   .header nav .nav-links {
     display: flex;
     flex-direction: column;
@@ -743,7 +756,81 @@ span {
       top: 20%;
       text-align: center;
       font-size: 3rem;
-      left: 11%; } }
+      left: 11%; }
+  /* -------RESPONSIVE: 780px TABLET: juegos.html ----------- */
+  .barra .joystick {
+    width: 100%; }
+    .barra .joystick .joystick-titulo {
+      font-size: 10vw;
+      text-align: center; }
+  .section-games .contenedor-games {
+    width: 100%; }
+    .section-games .contenedor-games .galeria {
+      display: none; }
+    .section-games .contenedor-games .galeria__responsive {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 5px 0px 5px 0px; }
+      .section-games .contenedor-games .galeria__responsive img {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 5px 0px 5px 0px;
+        border-radius: 10px; }
+  .exclusivo .exclusive-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px; }
+    .exclusivo .exclusive-container img {
+      width: 95%; }
+  .exclusivo .texto-exclusive h3 {
+    font-size: 1.4em; }
+  /* -------RESPONSIVE: 780px TABLET: contacto.html ----------- */
+  .section-contacto .container-contacto .contacto {
+    display: block; }
+    .section-contacto .container-contacto .contacto .contacto-right {
+      margin-top: 20px;
+      font-size: 1em;
+      width: 100%;
+      height: auto; }
+      .section-contacto .container-contacto .contacto .contacto-right table {
+        display: none; }
+    .section-contacto .container-contacto .contacto .contacto-right__responsive {
+      display: block; }
+      .section-contacto .container-contacto .contacto .contacto-right__responsive .p-title {
+        color: white;
+        padding: 0.5rem;
+        margin-left: 0;
+        text-decoration: underline; }
+    .section-contacto .container-contacto .contacto .contacto-left {
+      display: block; }
+      .section-contacto .container-contacto .contacto .contacto-left .input-row {
+        display: block; }
+  .footer-contacto {
+    position: relative;
+    width: 100%; }
+  /* -------RESPONSIVE: 780px TABLET: placas.html ----------- */
+  .encabezado .encabezado-container p {
+    font-size: 1rem; }
+  .encabezado .encabezado-container .placas-titulo {
+    font-size: 2.7rem; }
+  .nvidia-section .nvidia-container {
+    display: flex;
+    flex-direction: column; }
+  .nvidia-section .nvidia-img {
+    width: 100%; }
+  .nvidia-section .nvidia-titulo {
+    font-size: 2.5rem; }
+  .amd-container .amd-titulo {
+    font-size: 2.5rem; }
+  .amd-container .amd-img {
+    display: flex;
+    justify-content: center;
+    width: 100%; } }
 
 /* ---------- RESPONSIVE: FOOTER ------------ */
 @media screen and (max-width: 780px) {
@@ -764,19 +851,33 @@ span {
     bottom: 0;
     width: 100%; }
   .footer-index {
-    margin-top: 10%; } }
+    margin-top: 10%; }
+  .footer-contacto .footer-col {
+    width: 50%;
+    margin-bottom: 30px; }
+  .footer-contacto .footer-key {
+    position: absolute;
+    bottom: 0;
+    width: 100%; } }
 
 /* -------RESPONSIVE: 320px MOBILE ----------- */
 @media screen and (max-width: 320px) {
-  .header nav .nav-links {
-    display: flex;
-    flex-direction: column;
-    font-size: small; }
+  /* -------RESPONSIVE: 320px MOBILE: header ----------- */
+  .header {
+    /* -------RESPONSIVE: 320px MOBILE: footers----------- */ }
+    .header nav .nav-links {
+      display: flex;
+      flex-direction: column;
+      font-size: small; }
   .footer-index .container .row .footer-col {
     width: 100%;
     padding: 0 15px;
     margin-bottom: 30px; }
   .footer-key .container .row .footer-col {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 30px; }
+  .footer-contacto .container .row .footer-col {
     width: 100%;
     padding: 0 15px;
     margin-bottom: 30px; } }
@@ -785,19 +886,14 @@ span {
   .header .btn {
     width: 30%;
     display: none; }
-  .teclado-container {
-    width: 100%; }
-    .teclado-container p {
-      text-align: center;
-      width: 60%;
-      top: 35%;
-      margin: auto;
-      font-size: 20px; }
-    .teclado-container .titulo-teclado {
-      top: 20%;
-      text-align: center;
-      font-size: 3rem;
-      width: 70% !important; }
+  /* -------RESPONSIVE: 320px PAGINA: index.html ----------- */
+  .teclado-container h1 {
+    text-align: center;
+    margin-right: 60%; }
+  .teclado-container p {
+    text-align: center; }
+  .teclado-container .titulo-teclado {
+    text-align: center; }
   .section-titulo .parrafo {
     text-align: center;
     color: wheat;
@@ -824,4 +920,81 @@ span {
       width: 80%; }
     .productos .container-nosotros .productos-texto {
       margin-top: 5%;
-      margin-right: 5%; } }
+      margin-right: 5%; }
+  /* -------RESPONSIVE: 320px MOBILE PAGINA: juegos.html ----------- */
+  .barra .joystick {
+    width: 100%; }
+    .barra .joystick .joystick-titulo {
+      font-size: 10vw;
+      text-align: center; }
+  .section-games .contenedor-games {
+    width: 100%; }
+    .section-games .contenedor-games .galeria {
+      display: none; }
+    .section-games .contenedor-games .galeria__responsive {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 5px 0px 5px 0px; }
+      .section-games .contenedor-games .galeria__responsive img {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 5px 0px 5px 0px;
+        border-radius: 10px; }
+  .exclusivo .exclusive-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px; }
+    .exclusivo .exclusive-container img {
+      width: 95%; }
+    .exclusivo .exclusive-container .texto-exclusive h3 {
+      font-size: 1.4em; }
+  /* -------RESPONSIVE: 320px PAGINA: placas.html ----------- */
+  .encabezado .encabezado-container p {
+    font-size: 1rem; }
+  .encabezado .encabezado-container .placas-titulo {
+    font-size: 1.7rem; }
+  .encabezado .encabezado-container .placas-img {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto; }
+  .nvidia-section .nvidia-container {
+    display: flex;
+    flex-direction: column; }
+    .nvidia-section .nvidia-container .nvidia-img {
+      width: 100%; }
+    .nvidia-section .nvidia-container .nvidia-titulo {
+      font-size: 1.6rem; }
+  .amd-container .amd-titulo {
+    font-size: 1.6rem;
+    margin-top: 10%; }
+  .amd-container .amd-img {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  /* -------RESPONSIVE: 320px PAGINA: contacto.html ----------- */
+  .section-contacto .container-contacto .contacto {
+    display: block; }
+    .section-contacto .container-contacto .contacto .contacto-right {
+      margin-top: 20px;
+      font-size: 1em;
+      width: 100%;
+      height: auto; }
+      .section-contacto .container-contacto .contacto .contacto-right table {
+        display: none; }
+    .section-contacto .container-contacto .contacto .contacto-right__responsive {
+      display: block; }
+      .section-contacto .container-contacto .contacto .contacto-right__responsive .p-title {
+        color: white;
+        padding: 0.5rem;
+        margin-left: 0;
+        text-decoration: underline; }
+    .section-contacto .container-contacto .contacto .contacto-left {
+      display: block; }
+      .section-contacto .container-contacto .contacto .contacto-left .input-row {
+        display: block; } }

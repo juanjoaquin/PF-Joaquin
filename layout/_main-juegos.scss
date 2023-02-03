@@ -1,6 +1,6 @@
 .barra {
     .joystick {
-        background-image: url(../assets/img/playstation.avif);
+        background-image: url(../assets/img/playstation.jpg);
         height: 40rem;
         background-size: cover;
         background-repeat: no-repeat;
@@ -27,7 +27,7 @@
         min-height: 100vh;
         background-color: #000000;
         .galeria {
-            max-width: 750px;
+            max-width: 100%;
             display: grid;
             grid-template-columns: 250px 250px 250px;
             grid-template-rows: 250px 250px 250px;
@@ -46,7 +46,7 @@
             }
             img {
                 object-fit: cover;
-                width: 100%;
+                width: 95%;
                 height: 100%;
                 transition: all .2s ease-in-out;
                 border-radius: 10px;
@@ -56,6 +56,9 @@
                 }
             }
         }
+    .galeria__responsive {
+        display: none;
+    }
     }
 }
 .exclusivo {
@@ -63,41 +66,40 @@
         display: flex;
         height: 400px;
         width: 100%;
+        align-items: center;
         margin-top: 15px;
+
         justify-content: center;
         background: #ADA996;  
         background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
         background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
-        .img-exclusive {
-            img {
-                margin-top: 70px;
-                margin-bottom: 70px;
-                height: 300px;
-                width: 100%;
-                box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-            }
+        img {
+            width: 35%;
+            margin-left: 1%;
         }
+        
         .texto-exclusive {
-            margin-top: 168px;
-            position: relative;
-            padding: $size-regular;
+    margin-top: 168px;
+    padding: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: 15px;
+    text-align: center;
             h3 {
                 font-weight: 600;
-                font-size: 30px;
+                font-size: 1.7rem;
                 line-height: 1.1;
                 color: rgb(0, 0, 0);
                 font-family: 'Alfa Slab One';
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 p {
-                    margin-top: $size-regular;
-                    text-shadow: 0px 1px 5px $color-terciario;
-                    width: 100%;
+                    margin-top: 20px;
+                    text-shadow: 0px 1px 5px rgb(180, 179, 179);
                     color: rgb(61, 61, 61);
-                }
+                    font-size: 1.1rem;
             }
+        }
         }
     }
 }

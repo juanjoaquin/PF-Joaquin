@@ -65,7 +65,9 @@
         @include columna-flex;
         padding-top: 15px;
         .amd {
-            @extend .rtx
+            margin-top: 15px;
+            width: 60%;
+            cursor: pointer;
         }
         .amd-1 {
             margin: 15px 0 0 0;

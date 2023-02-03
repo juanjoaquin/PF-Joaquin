@@ -65,6 +65,7 @@
         color: #1c00b5;
     }
     .contacto-right {
+        
         flex-basis: 40%;
         padding: 40px;
         background: #1c00b5;
@@ -80,4 +81,8 @@
             padding-top:$size-regular ;
         }
     }
+}
+
+.contacto-right__responsive {
+    display: none;
 }

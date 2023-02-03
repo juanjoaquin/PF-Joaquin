@@ -3,6 +3,10 @@
 .footer-contacto {
     position: relative;
     width: 100%;
+    .galeria__responsive {
+        display: none;
+    }
+
 }
 }
 /* -------RESPONSIVE: 780px TABLET: header ----------- */
@@ -82,8 +86,13 @@
     }
 .teclado-container {
     width: 100%;
+    
+    h1 {
+        text-align: center;
+        padding-right: 10%;
+    }
     p {
-        text-align:start;
+        text-align:center;
         width: 60%;
         top: 35%;
         margin: auto;

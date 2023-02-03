@@ -386,15 +386,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
-  align-items: center;
   background-position: center;
   width: 100%; }
   .teclado-container h1 {
     color: #f8e4bd;
-    align-items: center;
+    text-align: start;
     top: 35%;
     position: absolute;
-    font-weight: 550;
     font-family: "montserrat";
     font-size: 75px;
     text-shadow: 4px 2px 16px rgba(0, 0, 0, 0.42); }
@@ -404,7 +402,8 @@
     top: 55%;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 4px 2px 16px rgba(221, 221, 221, 0.42); }
+    text-shadow: 4px 2px 16px rgba(221, 221, 221, 0.42);
+    text-align: start; }
 
 .cards {
   width: 75%;
@@ -463,7 +462,7 @@ span {
   font-weight: bolder; }
 
 .barra .joystick {
-  background-image: url(../assets/img/playstation.jpg);
+  background-image: url(../assets/img/playstation.jpggit);
   height: 40rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -694,7 +693,9 @@ span {
 @media screen and (max-width: 1600px) {
   .footer-contacto {
     position: relative;
-    width: 100%; } }
+    width: 100%; }
+    .footer-contacto .galeria__responsive {
+      display: none; } }
 
 /* -------RESPONSIVE: 780px TABLET: header ----------- */
 @media screen and (max-width: 780px) {
@@ -746,8 +747,11 @@ span {
     margin-bottom: 30%; }
   .teclado-container {
     width: 100%; }
+    .teclado-container h1 {
+      text-align: center;
+      padding-right: 10%; }
     .teclado-container p {
-      text-align: start;
+      text-align: center;
       width: 60%;
       top: 35%;
       margin: auto;
